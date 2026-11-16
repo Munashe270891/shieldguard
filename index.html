@@ -39,7 +39,6 @@
   </style>
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen antialiased">
-  <!-- Subtle Demo Notice for Client Pitching -->
   <div class="bg-slate-950 text-amber-300 text-xs text-center py-1.5 px-4 border-b border-slate-800">
     Interactive Client Demo Template — Sample rates, contact numbers &amp; license details shown for demonstration. Custom builds available on request.
   </div>
@@ -66,9 +65,8 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="relative bg-cover bg-center text-white" style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600')">
-      <div class="absolute inset-0 bg-black/65"></div>
+    <!-- Hero Section (uses clean dark gradient + optional local hero image if placed at assets/hero-security.jpg) -->
+    <section class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-red-950 text-white">
       <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
         <span class="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
           PSA Licensed • Lic No: PSA/2024/0187
@@ -186,64 +184,75 @@
     <section id="products" class="max-w-7xl mx-auto px-4 py-12">
       <h2 class="text-3xl font-bold">Installations - Gates, Fence, CCTV, Alarms</h2>
       <p class="text-gray-600 dark:text-gray-300 mt-2">
-        Automated sliding &amp; swing gates, high-voltage perimeter electric fencing, security wire, and HD CCTV surveillance.
+        Place your hardware photos in <code>assets/</code> (<code>electric-gate.jpg</code>, <code>electric-fence.jpg</code>, <code>security-wire.jpg</code>, <code>cctv.jpg</code>) so they always load reliably on GitHub Pages.
       </p>
 
-      <!-- Visual Hardware & Perimeter Showcase (<img src> links) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
         <figure class="card">
-          <img
-            src="https://images.unsplash.com/photo-1620902215344-9f06d6b6d643?fit=crop&w=900&q=80"
-            alt="Outdoor CCTV security camera mounted on building wall"
-            class="h-44 w-full object-cover"
-            loading="lazy"
-          >
-          <figcaption class="p-4">
-            <span class="badge bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-100 mb-2">CCTV Systems</span>
-            <p class="font-bold">HD &amp; Night-Vision Cameras</p>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">24/7 remote viewing &amp; perimeter recording.</p>
-          </figcaption>
-        </figure>
-
-        <figure class="card">
-          <img
-            src="https://images.pexels.com/photos/5859203/pexels-photo-5859203.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Monitored entrance gate and security checkpoint"
-            class="h-44 w-full object-cover"
-            loading="lazy"
-          >
+          <div class="h-44 w-full bg-slate-800 flex items-center justify-center text-slate-300 text-xs p-3 text-center">
+            <img
+              src="assets/electric-gate.jpg"
+              alt="Automated electric sliding gate and drive motor"
+              class="h-44 w-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            >
+            <span class="hidden">Add <strong>assets/electric-gate.jpg</strong> for Electric Gate photo</span>
+          </div>
           <figcaption class="p-4">
             <span class="badge bg-amber-100 text-amber-900 mb-2">Electric Gates</span>
             <p class="font-bold">Automated Gate Motors</p>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Sliding &amp; swing gate automation with backup power.</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Sliding &amp; swing gate motors, racks &amp; remotes.</p>
           </figcaption>
         </figure>
 
         <figure class="card">
-          <img
-            src="https://images.unsplash.com/photo-1674672670977-bcf517fc2376?auto=format&fit=crop&w=900&q=80"
-            alt="Property boundary fencing and perimeter security line"
-            class="h-44 w-full object-cover"
-            loading="lazy"
-          >
+          <div class="h-44 w-full bg-slate-800 flex items-center justify-center text-slate-300 text-xs p-3 text-center">
+            <img
+              src="assets/electric-fence.jpg"
+              alt="Perimeter electric fence mounted along boundary wall"
+              class="h-44 w-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            >
+            <span class="hidden">Add <strong>assets/electric-fence.jpg</strong> for Electric Fence photo</span>
+          </div>
           <figcaption class="p-4">
             <span class="badge bg-red-100 text-red-800 mb-2">Electric Fence</span>
             <p class="font-bold">Perimeter Electric Fencing</p>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Wall-top energizers, brackets &amp; alarm integration.</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Energizers, wall brackets &amp; zone alarms.</p>
           </figcaption>
         </figure>
 
         <figure class="card">
-          <img
-            src="https://images.pexels.com/photos/14415378/pexels-photo-14415378.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Commercial property security infrastructure and monitoring setup"
-            class="h-44 w-full object-cover"
-            loading="lazy"
-          >
+          <div class="h-44 w-full bg-slate-800 flex items-center justify-center text-slate-300 text-xs p-3 text-center">
+            <img
+              src="assets/security-wire.jpg"
+              alt="High-tensile security wire and perimeter cabling"
+              class="h-44 w-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            >
+            <span class="hidden">Add <strong>assets/security-wire.jpg</strong> for Security Wire photo</span>
+          </div>
           <figcaption class="p-4">
-            <span class="badge bg-blue-100 text-blue-900 mb-2">Security Wire &amp; Alarms</span>
-            <p class="font-bold">High-Tensile Wire &amp; Sensors</p>
-            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Perimeter wire reinforcement, beams &amp; siren alerts.</p>
+            <span class="badge bg-blue-100 text-blue-900 mb-2">Electric &amp; Security Wire</span>
+            <p class="font-bold">Perimeter Wire &amp; Cabling</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">High-tensile fence wire, lead-out &amp; sensor lines.</p>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="h-44 w-full bg-slate-800 flex items-center justify-center text-slate-300 text-xs p-3 text-center">
+            <img
+              src="assets/cctv.jpg"
+              alt="Outdoor CCTV surveillance camera"
+              class="h-44 w-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+            >
+            <span class="hidden">Add <strong>assets/cctv.jpg</strong> for CCTV photo</span>
+          </div>
+          <figcaption class="p-4">
+            <span class="badge bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-100 mb-2">CCTV Systems</span>
+            <p class="font-bold">HD &amp; Night-Vision Cameras</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">24/7 monitoring, NVR/DVR &amp; mobile viewing.</p>
           </figcaption>
         </figure>
       </div>
