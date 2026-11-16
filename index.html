@@ -1,126 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ShieldGuard Zimbabwe - Security Guards, CCTV, Electric Fence, Gates - Harare</title>
-<meta name="description" content="PSA Licensed security company in Harare. Guards, CCTV, electric fence, electric gates, alarms, response team. 15 min response.">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-<style type="text/tailwindcss">
-@theme { --color-brand: #0f172a; --color-brand-red: #dc2626; --color-gold: #facc15; }
-@custom-variant dark (&:where(.dark, .dark *));
-@layer components {
-  .btn-primary { @apply bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-lg font-semibold transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700; }
-  .btn-danger { @apply bg-red-600 hover:bg-red-500 text-white px-4 py-2.5 rounded-lg font-semibold transition active:scale-95 animate-pulse; }
-  .btn-gold { @apply bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 py-2.5 rounded-lg font-semibold transition; }
-  .input { @apply w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white; }
-  .label { @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1; }
-  .card { @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col; }
-  .badge { @apply inline-block px-2 py-1 rounded-full text-xs font-bold; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShieldGuard Zimbabwe - Security Guards, CCTV, Electric Fence, Gates - Harare</title>
+  <meta name="description" content="PSA Licensed security company in Harare. Guards, CCTV, electric fence, electric gates, alarms, response team. 15 min response.">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand: #0f172a;
+      --color-brand-red: #dc2626;
+      --color-gold: #facc15;
+    }
+    @custom-variant dark (&:where(.dark, .dark *));
+    @layer components {
+      .btn-primary {
+        @apply bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 rounded-lg font-semibold transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-slate-700 dark:hover:bg-slate-600 cursor-pointer;
+      }
+      .btn-danger {
+        @apply bg-red-600 hover:bg-red-500 text-white px-4 py-2.5 rounded-lg font-semibold transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-400 cursor-pointer;
+      }
+      .btn-gold {
+        @apply bg-yellow-400 hover:bg-yellow-300 text-gray-900 px-4 py-2.5 rounded-lg font-semibold transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-300 cursor-pointer;
+      }
+      .input {
+        @apply w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white;
+      }
+      .label {
+        @apply block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1;
+      }
+      .card {
+        @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col;
+      }
+      .badge {
+        @apply inline-block px-2.5 py-1 rounded-full text-xs font-bold;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen">
-<header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-20">
-<nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center gap-3">
-<h1 class="text-2xl font-extrabold">🛡️ SHIELD<span class="text-red-600">GUARD</span> <span class="text-xs font-normal text-gray-500">ZIMBABWE</span></h1>
-<div class="flex flex-wrap gap-3 items-center text-sm font-medium">
-<a href="#guarding" class="hover:text-red-600">Guarding</a><a href="#products" class="hover:text-red-600">Installations</a><a href="#jobs" class="hover:text-red-600">Jobs</a><a href="#quote" class="hover:text-red-600">Quote</a>
-<span id="openNowBadge" class="badge bg-green-100 text-green-800">● CONTROL ROOM OPEN 24/7</span>
-<button id="myRequestsBtn" class="relative btn-primary">My Requests <span id="requestCount" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span></button>
-<button id="darkModeBtn" class="btn-primary">🌙 Dark</button>
-<button id="panicBtn" class="btn-danger">🚨 EMERGENCY</button>
-</div></nav></header>
-<main>
-<section class="relative bg-cover bg-center text-white" style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600')">
-<div class="absolute inset-0 bg-black/60"></div>
-<div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
-<span class="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">PSA Licensed • Lic No: PSA/2024/0187</span>
-<h2 class="text-5xl md:text-7xl font-extrabold leading-tight mt-4">We Guard.<br>You Grow.</h2>
-<p class="text-lg md:text-xl mt-4 text-gray-200 max-w-2xl mx-auto">Guards, CCTV, Electric Fence, Gates, Alarms & Rapid Response in Harare. 15 min response, 24/7 control room.</p>
-<p id="weatherWidget" class="inline-block mt-4 bg-white/90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">Loading Harare weather...</p>
-<p id="safetyTipWidget" class="mt-3 italic text-gray-200">Safety Tip: Lock gates at 18:00 - <button id="newTipBtn" class="underline font-bold">New Tip ↻</button></p>
-<div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
-<button onclick="document.querySelector('#quote').scrollIntoView({behavior:'smooth'})" class="btn-gold text-base px-8 py-3">Get Free Quote</button>
-<button onclick="document.querySelector('#jobs').scrollIntoView({behavior:'smooth'})" class="btn-primary text-base px-8 py-3 border border-white">Apply As Guard</button>
-<button id="panicBtnHero" class="btn-danger text-base px-8 py-3">🚨 Emergency - Call Now</button>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto">
-<div class="bg-white/10 backdrop-blur p-4 rounded-xl"><p class="text-3xl font-extrabold">180+</p><p class="text-sm">Guards Deployed</p></div>
-<div class="bg-white/10 backdrop-blur p-4 rounded-xl"><p class="text-3xl font-extrabold">120+</p><p class="text-sm">Clients</p></div>
-<div class="bg-white/10 backdrop-blur p-4 rounded-xl"><p class="text-3xl font-extrabold">8</p><p class="text-sm">Years</p></div>
-<div class="bg-white/10 backdrop-blur p-4 rounded-xl"><p class="text-3xl font-extrabold">15 min</p><p class="text-sm">Response</p></div>
-</div></div></section>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-white min-h-screen antialiased">
+  <!-- Subtle Demo Notice for Client Pitching -->
+  <div class="bg-slate-950 text-amber-300 text-xs text-center py-1.5 px-4 border-b border-slate-800">
+    Interactive Client Demo Template — Sample rates, contact numbers &amp; license details shown for demonstration. Custom builds available on request.
+  </div>
 
-<section id="guarding" class="max-w-7xl mx-auto px-4 py-12">
-<h2 class="text-3xl font-bold">Guarding Services</h2><p class="text-gray-600 dark:text-gray-300 mt-2">Trained, vetted, supervised guards. We replace absent guards within 2 hours - guaranteed.</p>
-<div class="flex flex-col md:flex-row gap-3 mt-6"><input id="guardSearch" placeholder="Search... e.g. Night, VIP" class="input flex-1"><select id="guardFilterShift" class="input md:w-48"><option value="All">All Shifts</option><option value="Day">Day</option><option value="Night">Night</option><option value="Day+Night">24/7</option><option value="Event">Event</option><option value="24/7">Response 24/7</option></select></div>
-<div id="guardingGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-</section>
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-20">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row md:justify-between md:items-center gap-3" aria-label="Primary Navigation">
+      <a href="#" class="text-2xl font-extrabold tracking-tight">
+        🛡️ SHIELD<span class="text-red-600">GUARD</span> <span class="text-xs font-normal text-gray-500 dark:text-gray-400">ZIMBABWE</span>
+      </a>
+      <div class="flex flex-wrap gap-3 items-center text-sm font-medium">
+        <a href="#guarding" class="hover:text-red-600 transition">Guarding</a>
+        <a href="#products" class="hover:text-red-600 transition">Installations</a>
+        <a href="#jobs" class="hover:text-red-600 transition">Jobs</a>
+        <a href="#quote" class="hover:text-red-600 transition">Quote</a>
+        <span id="openNowBadge" class="badge bg-green-100 text-green-800">● CONTROL ROOM OPEN 24/7</span>
+        <button id="myRequestsBtn" type="button" class="relative btn-primary">
+          My Requests
+          <span id="requestCount" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">0</span>
+        </button>
+        <button id="darkModeBtn" type="button" class="btn-primary">🌙 Dark</button>
+        <button id="panicBtn" type="button" class="btn-danger animate-pulse">🚨 EMERGENCY</button>
+      </div>
+    </nav>
+  </header>
 
-<section id="calculator" class="max-w-7xl mx-auto px-4 py-12 bg-white dark:bg-gray-800 rounded-2xl">
-<h2 class="text-3xl font-bold">Guarding Cost Calculator - Instant Quote</h2>
-<form id="guardCalculatorForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 max-w-3xl">
-<div><label class="label">Service</label><select name="serviceId" class="input"></select></div>
-<div><label class="label">Number of Guards</label><input name="guards" type="number" min="1" max="20" value="1" class="input"></div>
-<div><label class="label">Duration (Months)</label><select name="months" class="input"><option value="1">1 Month</option><option value="3">3 Months</option><option value="6">6 Months - 5% off</option><option value="12">12 Months - 10% off</option></select></div>
-<div class="space-y-2"><label class="flex gap-2 text-sm"><input name="k9" type="checkbox" class="w-4 h-4"> Guard Dog (K9) +$150/mo</label><label class="flex gap-2 text-sm"><input name="supervisor" type="checkbox" class="w-4 h-4"> Supervisor Weekly Visit +$50/mo</label><label class="flex gap-2 text-sm"><input name="cctvMonitoring" type="checkbox" class="w-4 h-4"> CCTV Monitoring +$30/mo</label></div>
-</form>
-<div id="guardCalcResult" class="mt-4 bg-amber-100 dark:bg-amber-900/30 border border-amber-400 p-4 rounded-lg font-bold">Select service to see total</div>
-<button id="addGuardingToQuoteBtn" class="btn-primary mt-3">Add This To Quote Form ↓</button>
-</section>
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center text-white" style="background-image:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600')">
+      <div class="absolute inset-0 bg-black/65"></div>
+      <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
+        <span class="inline-block bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold">
+          PSA Licensed • Lic No: PSA/2024/0187
+        </span>
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mt-4">
+          We Guard.<br>You Grow.
+        </h1>
+        <p class="text-lg md:text-xl mt-4 text-gray-200 max-w-2xl mx-auto">
+          Guards, CCTV, Electric Fence, Gates, Alarms &amp; Rapid Response in Harare. 15 min response, 24/7 control room.
+        </p>
+        <p id="weatherWidget" class="inline-block mt-4 bg-white/90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium">
+          Loading Harare weather...
+        </p>
+        <p id="safetyTipWidget" class="mt-3 italic text-gray-200">
+          Safety Tip: Lock gates at 18:00 - <button id="newTipBtn" type="button" class="underline font-bold cursor-pointer">New Tip ↻</button>
+        </p>
 
-<section id="products" class="max-w-7xl mx-auto px-4 py-12">
-<h2 class="text-3xl font-bold">Installations - Gates, Fence, CCTV, Alarms</h2>
-<div class="flex flex-col md:flex-row gap-3 mt-6"><input id="productSearch" placeholder="Search... e.g. CCTV, Gate" class="input flex-1"><select id="productFilterCategory" class="input md:w-48"><option value="All">All Categories</option><option value="Gates">Gates</option><option value="Fencing">Fencing</option><option value="CCTV">CCTV</option><option value="Alarms">Alarms</option><option value="Repairs">Repairs</option></select></div>
-<div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mt-4 flex flex-col md:flex-row gap-3 items-center"><label class="label mb-0">Electric Fence Length (metres):</label><input id="fenceLength" type="number" placeholder="e.g. 55" class="input md:w-48"><span id="fenceResult" class="font-bold">Enter length to calculate</span></div>
-<div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-</section>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+          <button type="button" onclick="document.querySelector('#quote').scrollIntoView({behavior:'smooth'})" class="btn-gold text-base px-8 py-3">
+            Get Free Quote
+          </button>
+          <button type="button" onclick="document.querySelector('#jobs').scrollIntoView({behavior:'smooth'})" class="btn-primary text-base px-8 py-3 border border-white">
+            Apply As Guard
+          </button>
+          <button id="panicBtnHero" type="button" class="btn-danger text-base px-8 py-3">
+            🚨 Emergency - Call Now
+          </button>
+        </div>
 
-<section id="jobs" class="max-w-7xl mx-auto px-4 py-12 bg-white dark:bg-gray-800 rounded-2xl">
-<h2 class="text-3xl font-bold">Join ShieldGuard - We Are Hiring Guards</h2><p class="text-gray-600 dark:text-gray-300 mt-2">Free PSA training for new guards. 3 month contract after training. Salary on time, every month.</p>
-<div class="flex flex-col md:flex-row gap-3 mt-6"><select id="jobFilterLocation" class="input md:w-48"><option value="All">All Locations</option><option value="Harare">Harare</option><option value="Chitungwiza">Chitungwiza</option><option value="Norton">Norton</option></select><select id="jobFilterType" class="input md:w-48"><option value="All">All Types</option><option value="Full-Time">Full-Time</option><option value="Part-Time">Part-Time</option></select></div>
-<div id="jobsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
-</section>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto">
+          <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+            <p class="text-3xl font-extrabold">180+</p>
+            <p class="text-sm">Guards Deployed</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+            <p class="text-3xl font-extrabold">120+</p>
+            <p class="text-sm">Clients</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+            <p class="text-3xl font-extrabold">8</p>
+            <p class="text-sm">Years</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur p-4 rounded-xl">
+            <p class="text-3xl font-extrabold">15 min</p>
+            <p class="text-sm">Response</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<section id="apply" class="max-w-7xl mx-auto px-4 py-12">
-<h2 class="text-3xl font-bold">Guard Application Form - 2 Minutes</h2>
-<form id="applyForm" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-2xl mt-6 space-y-4">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Full Name *</label><input name="fullName" class="input" required></div><div><label class="label">Phone *</label><input name="phone" placeholder="0772123456" class="input" required></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Age *</label><input name="age" type="number" class="input" required></div><div><label class="label">National ID *</label><input name="idNumber" placeholder="63-1234567-A-63" class="input" required></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Height (cm) *</label><input name="heightCm" type="number" class="input" required></div><div><label class="label">O-Levels Passed (0-10)</label><input name="oLevels" type="number" min="0" max="10" value="0" class="input"></div></div>
-<div><label class="label">Role Applying For</label><select name="jobId" class="input"></select></div>
-<div class="space-y-2 text-sm"><label class="flex gap-2"><input name="exPolice" type="checkbox" class="w-4 h-4"> Ex-Police / Ex-Army</label><label class="flex gap-2"><input name="psaCert" type="checkbox" class="w-4 h-4"> I have PSA Certificate</label><label class="flex gap-2"><input name="canRun" type="checkbox" class="w-4 h-4"> I can run 2.4km in under 12 mins</label><label class="flex gap-2"><input name="licence" type="checkbox" class="w-4 h-4"> Driving Licence</label><label class="flex gap-2"><input name="firstAid" type="checkbox" class="w-4 h-4"> First Aid Certificate</label><label class="flex gap-2"><input name="hasRecord" type="checkbox" class="w-4 h-4"> I have a criminal record (be honest - we check)</label></div>
-<div id="applyResult" class="p-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm">Your score will appear here after submit.</div>
-<p id="applyError" class="text-red-600 font-bold min-h-5"></p>
-<button class="btn-primary w-full py-3">Submit Application</button>
-</form></section>
+    <!-- Guarding Services -->
+    <section id="guarding" class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">Guarding Services</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-2">
+        Trained, vetted, supervised guards. We replace absent guards within 2 hours - guaranteed.
+      </p>
+      <div class="flex flex-col md:flex-row gap-3 mt-6">
+        <label for="guardSearch" class="sr-only">Search guarding services</label>
+        <input id="guardSearch" placeholder="Search... e.g. Night, VIP" class="input flex-1">
+        <label for="guardFilterShift" class="sr-only">Filter by shift</label>
+        <select id="guardFilterShift" class="input md:w-48">
+          <option value="All">All Shifts</option>
+          <option value="Day">Day</option>
+          <option value="Night">Night</option>
+          <option value="Day+Night">24/7</option>
+          <option value="Event">Event</option>
+          <option value="24/7">Response 24/7</option>
+        </select>
+      </div>
+      <div id="guardingGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+    </section>
 
-<section id="quote" class="max-w-7xl mx-auto px-4 py-12">
-<h2 class="text-3xl font-bold">Request Free Quote / Inquiry</h2>
-<form id="quoteForm" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-2xl mt-6 space-y-4">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Your Name *</label><input name="clientName" class="input" required></div><div><label class="label">Phone *</label><input name="clientPhone" placeholder="0772123456" class="input" required></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Client Type</label><select name="clientType" class="input"><option>School</option><option>Church</option><option>Shop</option><option>Warehouse</option><option>Office</option><option>House</option><option>Bank</option><option>Event</option><option>Farm</option></select></div><div><label class="label">Area</label><select name="area" class="input"><option>Harare CBD</option><option>Borrowdale</option><option>Avondale</option><option>Chitungwiza</option><option>Norton</option><option>Ruwa</option></select></div></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div><label class="label">Service Needed</label><select name="serviceNeeded" class="input"><option>Guarding</option><option>Installation</option><option>Both</option></select></div><div><label class="label">Urgency</label><select name="urgency" class="input"><option>Normal - Within 3 days</option><option>Urgent - Within 24h</option><option>Emergency - Now</option></select></div></div>
-<div><label class="label">Message</label><textarea name="message" rows="3" placeholder="e.g. Need 2 night guards for warehouse in Msasa..." class="input"></textarea></div>
-<p id="quotePreview" class="bg-blue-50 dark:bg-blue-900/30 border border-blue-300 p-3 rounded-lg text-sm">Quote preview: Use calculator above to add guarding total, or describe installation in message.</p>
-<p id="quoteError" class="text-red-600 font-bold min-h-5"></p>
-<button class="btn-primary w-full py-3">Send Quote Request</button>
-</form></section>
+    <!-- Cost Calculator -->
+    <section id="calculator" class="max-w-7xl mx-auto px-4 py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+      <h2 class="text-3xl font-bold">Guarding Cost Calculator - Instant Quote</h2>
+      <form id="guardCalculatorForm" class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 max-w-3xl">
+        <div>
+          <label class="label" for="calcServiceId">Service</label>
+          <select id="calcServiceId" name="serviceId" class="input"></select>
+        </div>
+        <div>
+          <label class="label" for="calcGuards">Number of Guards</label>
+          <input id="calcGuards" name="guards" type="number" min="1" max="20" value="1" class="input">
+        </div>
+        <div>
+          <label class="label" for="calcMonths">Duration (Months)</label>
+          <select id="calcMonths" name="months" class="input">
+            <option value="1">1 Month</option>
+            <option value="3">3 Months</option>
+            <option value="6">6 Months - 5% off</option>
+            <option value="12">12 Months - 10% off</option>
+          </select>
+        </div>
+        <div class="space-y-2">
+          <label class="flex gap-2 text-sm items-center">
+            <input name="k9" type="checkbox" class="w-4 h-4"> Guard Dog (K9) +$150/mo
+          </label>
+          <label class="flex gap-2 text-sm items-center">
+            <input name="supervisor" type="checkbox" class="w-4 h-4"> Supervisor Weekly Visit +$50/mo
+          </label>
+          <label class="flex gap-2 text-sm items-center">
+            <input name="cctvMonitoring" type="checkbox" class="w-4 h-4"> CCTV Monitoring +$30/mo
+          </label>
+        </div>
+      </form>
+      <div id="guardCalcResult" class="mt-4 bg-amber-100 dark:bg-amber-900/30 border border-amber-400 p-4 rounded-lg font-bold">
+        Select service to see total
+      </div>
+      <button id="addGuardingToQuoteBtn" type="button" class="btn-primary mt-3">
+        Add This To Quote Form ↓
+      </button>
+    </section>
 
-<section id="myRequests" class="max-w-7xl mx-auto px-4 py-12">
-<div class="flex flex-col md:flex-row justify-between md:items-center gap-3"><h2 class="text-3xl font-bold">My Requests</h2><div class="flex gap-2"><select id="requestFilter" class="input md:w-48"><option value="All">All</option><option value="Quote">Quote</option><option value="Application">Application</option><option value="Emergency">Emergency</option></select><button id="clearRequestsBtn" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm">Clear All</button></div></div>
-<div id="requestsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
-</section>
+    <!-- Installations: Electric Gates, Electric Fence, Security Wire & CCTV -->
+    <section id="products" class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">Installations - Gates, Fence, CCTV, Alarms</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-2">
+        Automated sliding &amp; swing gates, high-voltage perimeter electric fencing, security wire, and HD CCTV surveillance.
+      </p>
 
-<section class="max-w-7xl mx-auto px-4 py-12"><h2 class="text-3xl font-bold">What Clients Say</h2><div id="testimonialGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6"></div></section>
-<section class="max-w-7xl mx-auto px-4 py-12"><h2 class="text-3xl font-bold">FAQs</h2><div id="faqList" class="space-y-3 mt-6 max-w-3xl"></div></section>
-</main>
-<footer class="bg-slate-900 text-white py-10"><div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"><div><h3 class="font-bold text-xl">SHIELDGUARD</h3><p class="text-gray-400 text-sm mt-2">22 Enterprise Road, Highlands, Harare<br>Control Room 24/7: 0800 123 456<br>WhatsApp: 0772 123 456<br>PSA Lic No: PSA/2024/0187</p></div><div><h3 class="font-bold">Office Hours</h3><p class="text-gray-400 text-sm mt-2">Mon-Fri: 08:00-17:00<br>Sat: 08:00-12:00<br>Control Room: 24/7</p></div><div><h3 class="font-bold">Coverage</h3><p class="text-gray-400 text-sm mt-2">Harare • Chitungwiza • Norton • Ruwa • Borrowdale • Avondale</p></div></div><p class="text-center text-gray-500 text-sm mt-8">© 2026 ShieldGuard Zimbabwe. All rights reserved.</p></footer>
+      <!-- Visual Hardware & Perimeter Showcase (<img src> links) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-6">
+        <figure class="card">
+          <img
+            src="https://images.unsplash.com/photo-1620902215344-9f06d6b6d643?fit=crop&w=900&q=80"
+            alt="Outdoor CCTV security camera mounted on building wall"
+            class="h-44 w-full object-cover"
+            loading="lazy"
+          >
+          <figcaption class="p-4">
+            <span class="badge bg-slate-100 text-slate-800 dark:bg-slate-700 dark:text-slate-100 mb-2">CCTV Systems</span>
+            <p class="font-bold">HD &amp; Night-Vision Cameras</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">24/7 remote viewing &amp; perimeter recording.</p>
+          </figcaption>
+        </figure>
 
-<div id="panicModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4"><div class="bg-white dark:bg-gray-800 rounded-xl max-w-md w-full p-6 relative"><button id="closePanicBtn" class="absolute top-3 right-3 text-2xl">×</button><h3 class="text-xl font-bold text-red-600">🚨 Emergency - Response Team</h3><p class="text-sm mt-1">If in danger, call <strong>0800 123 456</strong> NOW. Also fill below, we dispatch.</p><form id="panicForm" class="space-y-4 mt-4"><div><label class="label">Your Name *</label><input name="panicName" class="input" required></div><div><label class="label">Phone *</label><input name="panicPhone" class="input" required></div><div><label class="label">Location / Address *</label><input name="panicLocation" class="input" required></div><div><label class="label">Type</label><select name="panicType" class="input"><option>Break-in</option><option>Alarm Triggered</option><option>Suspicious Person</option><option>Medical</option><option>Other</option></select></div><button class="btn-danger w-full py-3">Dispatch Response Team</button></form></div></div>
+        <figure class="card">
+          <img
+            src="https://images.pexels.com/photos/5859203/pexels-photo-5859203.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Monitored entrance gate and security checkpoint"
+            class="h-44 w-full object-cover"
+            loading="lazy"
+          >
+          <figcaption class="p-4">
+            <span class="badge bg-amber-100 text-amber-900 mb-2">Electric Gates</span>
+            <p class="font-bold">Automated Gate Motors</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Sliding &amp; swing gate automation with backup power.</p>
+          </figcaption>
+        </figure>
 
-<div id="productModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4"><div class="bg-white dark:bg-gray-800 rounded-xl max-w-md w-full p-6 relative"><button id="closeProductBtn" class="absolute top-3 right-3 text-2xl">×</button><h3 id="modalProductName" class="text-xl font-bold">Product</h3><p id="modalProductInfo" class="text-sm mt-1"></p><form id="productQuoteForm" class="space-y-4 mt-4"><div><label class="label">Your Name *</label><input name="prodName" class="input" required></div><div><label class="label">Phone *</label><input name="prodPhone" class="input" required></div><div><label class="label">Quantity / Length (m) / Sensors</label><input name="prodQuantity" type="number" min="1" value="1" class="input"></div><button class="btn-primary w-full py-3">Request Installation Quote</button></form></div></div>
+        <figure class="card">
+          <img
+            src="https://images.unsplash.com/photo-1674672670977-bcf517fc2376?auto=format&fit=crop&w=900&q=80"
+            alt="Property boundary fencing and perimeter security line"
+            class="h-44 w-full object-cover"
+            loading="lazy"
+          >
+          <figcaption class="p-4">
+            <span class="badge bg-red-100 text-red-800 mb-2">Electric Fence</span>
+            <p class="font-bold">Perimeter Electric Fencing</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Wall-top energizers, brackets &amp; alarm integration.</p>
+          </figcaption>
+        </figure>
 
-<button id="scrollTopBtn" class="hidden fixed bottom-6 right-6 bg-red-600 text-white w-12 h-12 rounded-full shadow-lg text-xl z-30">↑</button>
-<script type="module" src="js/main.js"></script>
-</body></html>
+        <figure class="card">
+          <img
+            src="https://images.pexels.com/photos/14415378/pexels-photo-14415378.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Commercial property security infrastructure and monitoring setup"
+            class="h-44 w-full object-cover"
+            loading="lazy"
+          >
+          <figcaption class="p-4">
+            <span class="badge bg-blue-100 text-blue-900 mb-2">Security Wire &amp; Alarms</span>
+            <p class="font-bold">High-Tensile Wire &amp; Sensors</p>
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-1">Perimeter wire reinforcement, beams &amp; siren alerts.</p>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-3 mt-8">
+        <label for="productSearch" class="sr-only">Search installations</label>
+        <input id="productSearch" placeholder="Search... e.g. CCTV, Gate" class="input flex-1">
+        <label for="productFilterCategory" class="sr-only">Filter by installation category</label>
+        <select id="productFilterCategory" class="input md:w-48">
+          <option value="All">All Categories</option>
+          <option value="Gates">Gates</option>
+          <option value="Fencing">Fencing</option>
+          <option value="CCTV">CCTV</option>
+          <option value="Alarms">Alarms</option>
+          <option value="Repairs">Repairs</option>
+        </select>
+      </div>
+
+      <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg mt-4 flex flex-col md:flex-row gap-3 items-center">
+        <label for="fenceLength" class="label mb-0">Electric Fence Length (metres):</label>
+        <input id="fenceLength" type="number" min="1" placeholder="e.g. 55" class="input md:w-48">
+        <span id="fenceResult" class="font-bold">Enter length to calculate</span>
+      </div>
+
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="max-w-7xl mx-auto px-4 py-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
+      <h2 class="text-3xl font-bold">Join ShieldGuard - We Are Hiring Guards</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-2">
+        Free PSA training for new guards. 3 month contract after training. Salary on time, every month.
+      </p>
+      <div class="flex flex-col md:flex-row gap-3 mt-6">
+        <label for="jobFilterLocation" class="sr-only">Filter jobs by location</label>
+        <select id="jobFilterLocation" class="input md:w-48">
+          <option value="All">All Locations</option>
+          <option value="Harare">Harare</option>
+          <option value="Chitungwiza">Chitungwiza</option>
+          <option value="Norton">Norton</option>
+        </select>
+        <label for="jobFilterType" class="sr-only">Filter jobs by employment type</label>
+        <select id="jobFilterType" class="input md:w-48">
+          <option value="All">All Types</option>
+          <option value="Full-Time">Full-Time</option>
+          <option value="Part-Time">Part-Time</option>
+        </select>
+      </div>
+      <div id="jobsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"></div>
+    </section>
+
+    <!-- Guard Application Form -->
+    <section id="apply" class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">Guard Application Form - 2 Minutes</h2>
+      <form id="applyForm" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-2xl mt-6 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="applyFullName">Full Name *</label>
+            <input id="applyFullName" name="fullName" class="input" required>
+          </div>
+          <div>
+            <label class="label" for="applyPhone">Phone *</label>
+            <input id="applyPhone" name="phone" placeholder="0772123456" class="input" required>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="applyAge">Age *</label>
+            <input id="applyAge" name="age" type="number" min="18" max="70" class="input" required>
+          </div>
+          <div>
+            <label class="label" for="applyIdNumber">National ID *</label>
+            <input id="applyIdNumber" name="idNumber" placeholder="63-1234567-A-63" class="input" required>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="applyHeightCm">Height (cm) *</label>
+            <input id="applyHeightCm" name="heightCm" type="number" min="140" max="220" class="input" required>
+          </div>
+          <div>
+            <label class="label" for="applyOLevels">O-Levels Passed (0-10)</label>
+            <input id="applyOLevels" name="oLevels" type="number" min="0" max="10" value="0" class="input">
+          </div>
+        </div>
+        <div>
+          <label class="label" for="applyJobId">Role Applying For</label>
+          <select id="applyJobId" name="jobId" class="input"></select>
+        </div>
+        <div class="space-y-2 text-sm">
+          <label class="flex gap-2 items-center"><input name="exPolice" type="checkbox" class="w-4 h-4"> Ex-Police / Ex-Army</label>
+          <label class="flex gap-2 items-center"><input name="psaCert" type="checkbox" class="w-4 h-4"> I have PSA Certificate</label>
+          <label class="flex gap-2 items-center"><input name="canRun" type="checkbox" class="w-4 h-4"> I can run 2.4km in under 12 mins</label>
+          <label class="flex gap-2 items-center"><input name="licence" type="checkbox" class="w-4 h-4"> Driving Licence</label>
+          <label class="flex gap-2 items-center"><input name="firstAid" type="checkbox" class="w-4 h-4"> First Aid Certificate</label>
+          <label class="flex gap-2 items-center"><input name="hasRecord" type="checkbox" class="w-4 h-4"> I have a criminal record (be honest - we check)</label>
+        </div>
+        <div id="applyResult" class="p-3 rounded-lg bg-gray-100 dark:bg-gray-700 text-sm">
+          Your score will appear here after submit.
+        </div>
+        <p id="applyError" class="text-red-600 font-bold min-h-5"></p>
+        <button type="submit" class="btn-primary w-full py-3">Submit Application</button>
+      </form>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">Request Free Quote / Inquiry</h2>
+      <form id="quoteForm" class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg max-w-2xl mt-6 space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="quoteClientName">Your Name *</label>
+            <input id="quoteClientName" name="clientName" class="input" required>
+          </div>
+          <div>
+            <label class="label" for="quoteClientPhone">Phone *</label>
+            <input id="quoteClientPhone" name="clientPhone" placeholder="0772123456" class="input" required>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="quoteClientType">Client Type</label>
+            <select id="quoteClientType" name="clientType" class="input">
+              <option>School</option>
+              <option>Church</option>
+              <option>Shop</option>
+              <option>Warehouse</option>
+              <option>Office</option>
+              <option>House</option>
+              <option>Bank</option>
+              <option>Event</option>
+              <option>Farm</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="quoteArea">Area</label>
+            <select id="quoteArea" name="area" class="input">
+              <option>Harare CBD</option>
+              <option>Borrowdale</option>
+              <option>Avondale</option>
+              <option>Chitungwiza</option>
+              <option>Norton</option>
+              <option>Ruwa</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="label" for="quoteServiceNeeded">Service Needed</label>
+            <select id="quoteServiceNeeded" name="serviceNeeded" class="input">
+              <option>Guarding</option>
+              <option>Installation</option>
+              <option>Both</option>
+            </select>
+          </div>
+          <div>
+            <label class="label" for="quoteUrgency">Urgency</label>
+            <select id="quoteUrgency" name="urgency" class="input">
+              <option>Normal - Within 3 days</option>
+              <option>Urgent - Within 24h</option>
+              <option>Emergency - Now</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="label" for="quoteMessage">Message</label>
+          <textarea id="quoteMessage" name="message" rows="3" placeholder="e.g. Need 2 night guards for warehouse in Msasa..." class="input"></textarea>
+        </div>
+        <p id="quotePreview" class="bg-blue-50 dark:bg-blue-900/30 border border-blue-300 p-3 rounded-lg text-sm">
+          Quote preview: Use calculator above to add guarding total, or describe installation in message.
+        </p>
+        <p id="quoteError" class="text-red-600 font-bold min-h-5"></p>
+        <button type="submit" class="btn-primary w-full py-3">Send Quote Request</button>
+      </form>
+    </section>
+
+    <!-- My Requests -->
+    <section id="myRequests" class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex flex-col md:flex-row justify-between md:items-center gap-3">
+        <h2 class="text-3xl font-bold">My Requests</h2>
+        <div class="flex gap-2">
+          <label for="requestFilter" class="sr-only">Filter requests</label>
+          <select id="requestFilter" class="input md:w-48">
+            <option value="All">All</option>
+            <option value="Quote">Quote</option>
+            <option value="Application">Application</option>
+            <option value="Emergency">Emergency</option>
+          </select>
+          <button id="clearRequestsBtn" type="button" class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer">
+            Clear All
+          </button>
+        </div>
+      </div>
+      <div id="requestsList" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6"></div>
+    </section>
+
+    <!-- Testimonials & FAQs -->
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">What Clients Say</h2>
+      <div id="testimonialGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6"></div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-3xl font-bold">FAQs</h2>
+      <div id="faqList" class="space-y-3 mt-6 max-w-3xl"></div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-white py-10">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="font-bold text-xl">SHIELDGUARD</h3>
+        <p class="text-gray-400 text-sm mt-2">
+          22 Enterprise Road, Highlands, Harare<br>
+          Control Room 24/7: 0800 123 456<br>
+          WhatsApp: 0772 123 456<br>
+          PSA Lic No: PSA/2024/0187
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold">Office Hours</h3>
+        <p class="text-gray-400 text-sm mt-2">
+          Mon-Fri: 08:00-17:00<br>
+          Sat: 08:00-12:00<br>
+          Control Room: 24/7
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold">Coverage</h3>
+        <p class="text-gray-400 text-sm mt-2">
+          Harare • Chitungwiza • Norton • Ruwa • Borrowdale • Avondale
+        </p>
+      </div>
+    </div>
+    <p class="text-center text-gray-500 text-sm mt-8">© 2026 ShieldGuard Zimbabwe. All rights reserved.</p>
+  </footer>
+
+  <!-- Emergency Modal -->
+  <div id="panicModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="panicModalTitle">
+    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-md w-full p-6 relative">
+      <button id="closePanicBtn" type="button" aria-label="Close emergency modal" class="absolute top-3 right-3 text-2xl cursor-pointer">×</button>
+      <h3 id="panicModalTitle" class="text-xl font-bold text-red-600">🚨 Emergency - Response Team</h3>
+      <p class="text-sm mt-1">If in danger, call <strong>0800 123 456</strong> NOW. Also fill below, we dispatch.</p>
+      <form id="panicForm" class="space-y-4 mt-4">
+        <div>
+          <label class="label" for="panicName">Your Name *</label>
+          <input id="panicName" name="panicName" class="input" required>
+        </div>
+        <div>
+          <label class="label" for="panicPhone">Phone *</label>
+          <input id="panicPhone" name="panicPhone" class="input" required>
+        </div>
+        <div>
+          <label class="label" for="panicLocation">Location / Address *</label>
+          <input id="panicLocation" name="panicLocation" class="input" required>
+        </div>
+        <div>
+          <label class="label" for="panicType">Type</label>
+          <select id="panicType" name="panicType" class="input">
+            <option>Break-in</option>
+            <option>Alarm Triggered</option>
+            <option>Suspicious Person</option>
+            <option>Medical</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-danger w-full py-3">Dispatch Response Team</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Product Modal -->
+  <div id="productModal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+    <div class="bg-white dark:bg-gray-800 rounded-xl max-w-md w-full p-6 relative">
+      <button id="closeProductBtn" type="button" aria-label="Close installation quote modal" class="absolute top-3 right-3 text-2xl cursor-pointer">×</button>
+      <h3 id="modalProductName" class="text-xl font-bold">Product</h3>
+      <p id="modalProductInfo" class="text-sm mt-1"></p>
+      <form id="productQuoteForm" class="space-y-4 mt-4">
+        <div>
+          <label class="label" for="prodName">Your Name *</label>
+          <input id="prodName" name="prodName" class="input" required>
+        </div>
+        <div>
+          <label class="label" for="prodPhone">Phone *</label>
+          <input id="prodPhone" name="prodPhone" class="input" required>
+        </div>
+        <div>
+          <label class="label" for="prodQuantity">Quantity / Length (m) / Sensors</label>
+          <input id="prodQuantity" name="prodQuantity" type="number" min="1" value="1" class="input">
+        </div>
+        <button type="submit" class="btn-primary w-full py-3">Request Installation Quote</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="scrollTopBtn" type="button" aria-label="Scroll to top" class="hidden fixed bottom-6 right-6 bg-red-600 hover:bg-red-500 text-white w-12 h-12 rounded-full shadow-lg text-xl z-30 cursor-pointer">↑</button>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
